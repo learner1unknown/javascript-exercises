@@ -17,23 +17,16 @@ const subtract = function() {
 const sum = function() {
 
   let args = Array.from(arguments);
-  let answer = 0;
-
-  for (let i = 0; i < args.length; i++) {
-    answer = answer + args[i];
-  }
-
+  let answer = args.reduce((value1, value2) => value1+value2, 0)
   return answer
 	
 };
 
 const multiply = function(array) {
 
-  let answer = 1;
-  for (let i = 0; i <array.length; i++) {
-    answer = answer * array[i];
-  }
-    return answer
+  let args = arguments[0];
+  let answer = args.reduce((value1, value2) => value1*value2, 1)
+  return answer
 };
 
 const power = function() {
