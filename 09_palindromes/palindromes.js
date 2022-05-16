@@ -7,15 +7,12 @@ const palindromes = function (string) {
 
 string = string.replace(/\W|_/g, '');
 string = string.toLowerCase();
-string = string.split('');
+newString = string.split('');
+let reversed = newString.reverse();
+reversed = reversed.join('');
 
-let reversed = [];
 
-for (let i = 0; i <= string.length; i++) {
-    reversed[i] = string[string.length - i];
-}
-
-return reversed.join('') == string.join('')
+return string === reversed;
 
 };
 
