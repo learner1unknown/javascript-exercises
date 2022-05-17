@@ -2,13 +2,12 @@ const caesar = function() {
 
     const string = arguments[0];
     let code = arguments[1];
+    //making sure code is betweeen 26 and -26 
     if (code > 26 || code < -26) {
         code = code - Math.round(code/26)*26;
     }
   
     const letters = string.split('');
-    //const ascii = letters.map(letter => letter.charCodeAt())
-    //console.log(ascii)
 
     const ascii = letters.map(letter => {
 
@@ -39,15 +38,12 @@ const caesar = function() {
             }
         }
 
-        return number
         // keep number the same if it is not a letter as it is a non alphabetic character
 
-
+        return number
     })
 
     return String.fromCharCode.apply(String, ascii)
-    
-
 };
 
 // Do not edit below this line
